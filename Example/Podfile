@@ -5,6 +5,12 @@ platform :ios, '8.0'
 target 'PrivateLib_Example' do
   pod 'PrivateLib', :path => '../'
 
+
+#  pod 'PrivateLib', :path => '../', :subspecs => [
+#    'Person'
+#  ]
+
+  
   target 'PrivateLib_Tests' do
     inherit! :search_paths
 

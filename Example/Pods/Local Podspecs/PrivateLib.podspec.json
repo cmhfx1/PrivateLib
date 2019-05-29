@@ -1,0 +1,37 @@
+{
+  "name": "PrivateLib",
+  "version": "0.1.0",
+  "summary": "A short description of PrivateLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/cmhfx1@gmail.com/PrivateLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cmhfx1@gmail.com": "702665521@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/cmhfx1@gmail.com/PrivateLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "Dog",
+      "public_header_files": "PrivateLib/Classes/Dog/*.h",
+      "source_files": "PrivateLib/Classes/Dog/*.{h,m,c}"
+    },
+    {
+      "name": "Person",
+      "source_files": "PrivateLib/Classes/Person/**/*.{h,m,c}",
+      "dependencies": {
+        "AFNetworking": [
+          "~> 2.3"
+        ]
+      }
+    }
+  ]
+}

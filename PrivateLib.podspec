@@ -25,12 +25,22 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'cmhfx1@gmail.com' => '702665521@qq.com' }
-  s.source           = { :git => 'https://github.com/cmhfx1@gmail.com/PrivateLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/cmhfx1@gmail.com/PrivateLib.git', :tag => '0.1.0' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'PrivateLib/Classes/**/*'
+  
+  s.subspec 'Dog' do |dg|
+    dg.public_header_files = 'PrivateLib/Classes/Dog/*.h'
+    dg.source_files        = 'PrivateLib/Classes/Dog/*.{h,m,c}'
+  end
+  
+  s.subspec 'Person' do |ps|
+      ps.source_files        = 'PrivateLib/Classes/Person/**/*.{h,m,c}'
+      ps.dependency 'AFNetworking', '~> 2.3'
+  end
+  
+  #s.source_files = 'PrivateLib/Classes/**/*'
   
   # s.resource_bundles = {
   #   'PrivateLib' => ['PrivateLib/Assets/*.png']
